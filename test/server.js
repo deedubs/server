@@ -16,4 +16,11 @@ describe('component-server', function() {
       .expect(200)
       .end(done);
   });
+
+  it('should be able to detect private repos and attach auth information', function(done) {
+    api
+      .get('/deedubs/test/master/README.md')
+      .expect(200)
+      .end(done);
+  });
 })
