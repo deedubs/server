@@ -3,12 +3,7 @@
  * Module dependencies.
  */
 
-var express = require('express');
+var server = require('lib/server');
 
-var app = express();
-
-app.use(express.logger('dev'));
-app.use(express.static(__dirname + '/repos'));
-
-app.listen(3000);
+server.listen(3000);
 console.log('Component server listening in port 3000');
